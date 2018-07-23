@@ -19,27 +19,18 @@ class Default_Models_tblProduct extends Libs_Model {
     public function getProductById($id) {
         return $this->model->fetchOne("SELECT * FROM sanpham WHERE id = $id");
     }
-
-    public function getProductByName($name) {
-        
+    
+    public function getLaptopKhuyenmai(){
+        return $this->model->fetchAll("SELECT * FROM sanpham ORDER BY giamgia DESC LIMIT 8");
     }
-
-    public function getProductByCatId($catId) {
-        
+    
+    public function getLaptopMoi(){
+        return $this->model->fetchAll("SELECT * FROM sanpham ORDER BY ngaynhapkho DESC LIMIT 8");
     }
-
-    public function getProductByPrice($price) {
-        
+    
+    public function getLaptopBanchay(){
+//        return $this->model->fetchAll("SELECT * FROM sanpham ORDER BY giamgia DESC LIMIT 8");
     }
-
-    public function getProductOptions($arrParam) {
-        
-    }
-
-    public function addCommentByProduct($id) {
-        
-    }
-
 }
 
 ?>

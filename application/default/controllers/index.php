@@ -17,6 +17,7 @@ class Default_Controllers_Index extends Libs_Controller {
         $this->view->arrMenuMacbook = $objCategory->getDanhMucAppleMacbook();
         $this->view->arrMenuPhukien = $objCategory->getDanhMucPhuKien();
         $this->view->arrMenuLinhkien = $objCategory->getDanhMucLinhKien();
+        $this->view->arrLaptopKhuyenmai = $objProduct->getLaptopKhuyenmai();
         $this->view->render('index/index');
         
     }
